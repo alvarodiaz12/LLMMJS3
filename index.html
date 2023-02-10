@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cambiar colores de un DIV</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+
+
+</head>
+<body>
+    <h1 id="Cabecera">Contenido</h1>
+    <input type ="button" onclick="cambiarColor()" value = "Cambiar Color">
+
+    <h2>1</h2>
+    <h2>2</h2>
+
+    <p class="destacado">Antes del script</p>
+
+    <img src="images/Switch1.webp" width="600px" height="400px">
+    <input type ="button" onclick="cambiarImagen()" value = "Cambiar Imagen">
+
+    <div class="contenido"> 
+        <section class="botones">
+            <input type="button" value="rojo" id="btnrojo" onclick="setColorRojo()"
+            onmouseenter="setEnterRojo()" onmouseleave="setLeaveRojo()" onmousedown="setDownRojo()">
+            <input type="button" value="verde" id="btnverde" onclick="setColorVerde()"
+            onmouseenter="setEnterVerde()" onmouseleave="setLeaveVerde()" onmousedown="setDownVerde()">
+            <input type="button" value="azul" id="btnazul" onclick="setColorAzul()"
+            onmouseenter="setEnterAzul()" onmouseleave="setLeaveAzul()" onmousedown="setDownAzul()">
+            <input type="button" value="amarillo" id="btnamarillo" onclick="setColorAmarillo()"
+            onmouseenter="setEnterAmarillo()" onmouseleave="setLeaveAmarillo()" onmousedown="setDownAmarillo()">
+            <input type="button" value="naranja" id="btnnaranja" onclick="setColorNaranja()"
+            onmouseenter="setEnterNaranja()" onmouseleave="setLeaveNaranja()" onmousedown="setDownNaranja()">
+            <input type="button" value="reset" id="btnreset" onclick="setColorReset()"
+            onmouseenter="setEnterReset()" onmouseleave="setLeaveReset()" onmousedown="setDownReset()">
+        </section>
+        <div class="box">
+        </div>
+    </div>
+    
+    <script src="js/changecolor.js"></script>
+</body>
+</html>
