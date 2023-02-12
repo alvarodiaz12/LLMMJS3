@@ -36,7 +36,7 @@ input {
     width: 550px;
     height: 350px;
     border: 3px groove white;
-    background: #000;
+    background-color: white;
 }
 
 h1{

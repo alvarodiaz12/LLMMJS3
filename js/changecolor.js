@@ -23,7 +23,9 @@ let subcab = document.querySelectorAll("h2");
 let cambioReloj = setInterval(
   ()=>{
     fecha = new Date();
-    subcab[1].innerHTML = fecha.toLocaleTimeString() + " - " + fecha.toLocaleDateString() + " - " + fecha.toLocaleDateString('esp-Spain', { weekday: 'long' });
+    let diaSemana = fecha.toLocaleString('default',{weekday:'long'});
+    diaSemana = diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1);
+    subcab[1].innerHTML = fecha.toLocaleTimeString() + " - " + fecha.toLocaleDateString() + " - " + diaSemana;
   },
 1000);
 
@@ -46,7 +48,17 @@ let btnAzul = document.getElementById('btnazul');
 let btnAmarillo= document.getElementById('btnamarillo');
 let btnNaranja = document.getElementById('btnnaranja');
 let btnReset = document.getElementById('btnreset');
+
 let box = document.querySelector('.box');
+let widthAndHeight = document.querySelector('.ancho-alto');
+
+function updateWidthAndHeight() {
+widthAndHeight.innerHTML = "Ancho: " + box.offsetWidth + "px / Alto: " + box.offsetHeight + "px";
+}
+
+updateWidthAndHeight();
+window.addEventListener("resize", updateWidthAndHeight);
+
 
 function setEnterRojo(){
   btnRojo.style.background = "#0000FF"
@@ -152,9 +164,11 @@ function setColorNaranja() {
 
 function setColorReset() {
   if(btnReset.value == "reset") {
-    box.style.background = "#000000";
+    box.style.background = "#FFFFFF";
   }
 }
+
+
 
 
 
